@@ -16,3 +16,15 @@ footer {
     text-align: center;
     margin-top: 50px;
 }
+.current-date-block {
+    background-color: aquamarine;
+}
+.input {
+    background-color: lightpink;
+}
+.current-weather-block {
+    background-color: lightgoldenrodyellow;
+}
+.precipitation {
+    background-color: lightsalmon;
+}

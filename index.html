@@ -2,43 +2,109 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="author" content="Anna Shapovalova">
-    <meta name="description" content="On this page you can find the exact weather forecast.">
+    <meta 
+     http-equiv="X-UA-Compatible"
+     content="IE=edge">
+    <meta 
+     name="viewport" 
+     content="width=device-width, initial-scale=1.0">
+    <meta 
+     name="author" 
+     content="Anna Shapovalova">
+    <meta 
+     name="description" 
+     content="On this page you can find the exact weather forecast.">
     <title>Weather App</title>
     <link 
-    href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" 
-    rel="stylesheet"
-    integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" 
-    crossorigin="anonymous">
-    <link rel="icon" href="src/weather-title-icon.svg.png" type="image/x-icon">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="src/style.css" type="text/css">
+     href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" 
+     rel="stylesheet"
+     integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" 
+     crossorigin="anonymous">
+    <link 
+     rel="icon" 
+     href="src/weather-title-icon.svg.png" type="image/x-icon">
+    <link 
+     rel="preconnect" 
+     href="https://fonts.googleapis.com">
+    <link 
+     rel="preconnect" 
+     href="https://fonts.gstatic.com" 
+     crossorigin>
+    <link 
+     href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" 
+     rel="stylesheet">
+    <link 
+     rel="stylesheet" 
+     href="src/style.css" 
+     type="text/css">
 </head>
 <body>
   <main>
     <div class="container">
 
       <div class="row">
-        <div class="col">
-          <h1>
+        <div class="col current-date-block">
+          <h1 
+           class="current-city" 
+           id="city">
             Kyiv
           </h1>
           <h3>
-            Monday 29 August 20:00
+            <span 
+             class="current-day-of-week"
+             id="day">
+              Monday
+            </span>
+            <span
+             class="current-date"
+             id="date">
+              29
+            </span>
+            <span 
+             class="current-month" 
+             id="month">
+              August
+            </span>
+            <span class="current-time">
+              <span 
+               class="current-hours" 
+               id="hours">
+                12
+              </span>
+              :
+              <span 
+               class="current-minutes" 
+               id="minutes">
+                00
+              </span>
+            </span>
           </h3>
         </div>
 
-        <div class="col">
+        <div class="col input">
           <form>
-            <input type="text">
-            <button>Search</button>
+            <input 
+             type="search" 
+             class="form-control rounded input-form"
+             id="search-text-input" 
+             placeholder="Search city" 
+             aria-label="Search"
+             aria-describedby="search-addon"
+             required
+             autocomplete
+             autofocus/>
+            <button 
+             type="submit"
+             class="btn btn-outline-primary search-button">
+              Search
+            </button>
           </form>
           <form>
-            <button>Find Me</button>
+            <button 
+             type="submit"
+             class="btn btn-outline-primary find-me-button">
+              Find Me
+            </button>
           </form>
         </div>
       </div>
@@ -46,95 +112,157 @@
     
       <div class="row"> 
 
-        <div class="col">
+        <div class="col current-weather-block">
           <div class="row">
             <div class="col">
-              <img src="http://openweathermap.org/img/wn/10d@2x.png" alt="">
+              <img 
+               src="http://openweathermap.org/img/wn/10d@2x.png" 
+               alt="Weather icon">
             </div>
             <div class="col">
-              <h2>
-                12&deg; C|F
+              <h2 
+               class="current-temperature" 
+               id="temperature">
+                12&deg; 
+                <span>
+                  <sup class="unit">
+                    <a href="#" id="celsius" class="celsius-unit">
+                      C
+                    </a>
+                  </sup>
+                  <sup class="separator">
+                    |
+                  </sup>
+                  <sup class="unit">
+                    <a href="#" id="farenheit" class="farenheit-unit">
+                      F
+                    </a>
+                  </sup>
+                </span>
               </h2>
-              <h3>
+              <h3 class="description">
                 Rain
               </h3>
             </div>
           </div>
         </div>
 
-        <div class="col">
+        <div class="col precipitation">
           <div class="row">
+
             <div class="col">
-              <ul>
-                <li>
-                  7 mph
+              <ul class="precipitation-list">
+                <li lass="precipitation-item forecast-wind-value">
+                  <span id="wind-speed">
+                    8
+                  </span>
+                  km/h
                 </li>
-                <li>
+                <li class="precipitation-item forecast-wind">
                   Wind
                 </li>
               </ul>
             </div>
+
             <div class="col">
-              <ul>
-                <li>
+              <ul class="precipitation-list">
+                <li class="precipitation-item">
                   05:27
                 </li>
-                <li>
+                <li class="precipitation-item">
                   Sunrise
                 </li>
               </ul>
             </div>
+
           <div class="row">
+
             <div class="col">
-              <ul>
-                <li>
-                  100%
+              <ul class="precipitation-list">
+                <li class="precipitation-item forecast-humidity-value">
+                  <span id="humidity">
+                    100
+                  </span>
+                  %
                 </li>
-                <li>
+                <li class="precipitation-item forecast-humidity">
                   Rain
                 </li>
               </ul>
             </div>
+
             <div class="col">
-              <ul>
-                <li>
+              <ul class="precipitation-list">
+                <li class="precipitation-item">
                   20:57
                 </li>
-                <li>
+                <li class="precipitation-item">
                   Sunset
                 </li>
               </ul>
             </div>
+
           </div>
+
         </div>
       </div>
 
 
       <div class="row">
         <div class="col">
-          <h4>Mon</h4>
-          <img src="http://openweathermap.org/img/wn/02d@2x.png" alt="">
-          <p>15&deg; | 7&deg;</p>
+          <h4>
+            Mon
+          </h4>
+          <img 
+           src="http://openweathermap.org/img/wn/02d@2x.png" 
+           alt="Weather icon">
+          <p>
+            15&deg; | 7&deg;
+          </p>
         </div>
         <div class="col">
-          <h4>Mon</h4>
-          <img src="http://openweathermap.org/img/wn/02d@2x.png" alt="">
-          <p>15&deg; | 7&deg;</p>
+          <h4>
+            Mon
+          </h4>
+          <img 
+           src="http://openweathermap.org/img/wn/02d@2x.png" 
+           alt="Weather icon">
+          <p>
+            15&deg; | 7&deg;
+          </p>
         </div>
         <div class="col">
-          <h4>Mon</h4>
-          <img src="http://openweathermap.org/img/wn/02d@2x.png" alt="">
-          <p>15&deg; | 7&deg;</p>
+          <h4>
+            Mon
+          </h4>
+          <img 
+           src="http://openweathermap.org/img/wn/02d@2x.png" 
+           alt="Weather icon">
+          <p>
+            15&deg; | 7&deg;
+          </p>
         </div>
         <div class="col">
-          <h4>Mon</h4>
-          <img src="http://openweathermap.org/img/wn/02d@2x.png" alt="">
-          <p>15&deg; | 7&deg;</p>
+          <h4>
+            Mon
+          </h4>
+          <img 
+           src="http://openweathermap.org/img/wn/02d@2x.png" 
+           alt="Weather icon">
+          <p>
+            15&deg; | 7&deg;
+          </p>
         </div>
         <div class="col">
-          <h4>Mon</h4>
-          <img src="http://openweathermap.org/img/wn/02d@2x.png" alt="">
-          <p>15&deg; | 7&deg;</p>
+          <h4>
+            Mon
+          </h4>
+          <img 
+           src="http://openweathermap.org/img/wn/02d@2x.png" 
+           alt="Weather icon">
+          <p>
+            15&deg; | 7&deg;
+          </p>
         </div>
       </div>
 
@@ -143,15 +271,24 @@
  
   <footer>
     <p>This project was coded by
-      <a href="https://www.linkedin.com/in/anna-shapovalova-63116b238/" target="_blank" class="subscription">
+      <a 
+       href="https://www.linkedin.com/in/anna-shapovalova-63116b238/" 
+       target="_blank" 
+       class="subscription">
         Anna Shapovalova
       </a>
       and is
-      <a href="https://github.com/hannashapovalova/Vanilla-Weather-App" target="_blank" class="subscription">
+      <a 
+       href="https://github.com/hannashapovalova/Vanilla-Weather-App" 
+       target="_blank" 
+       class="subscription">
         open-sourced on GitHub
       </a>
       and
-      <a href="https://wondrous-rabanadas-c618a1.netlify.app" target="_blank" class="subscription">
+      <a 
+       href="https://wondrous-rabanadas-c618a1.netlify.app" 
+       target="_blank" 
+       class="subscription">
         hosted on Netlify
       </a>
       .
