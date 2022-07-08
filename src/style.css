@@ -20,6 +20,15 @@ footer {
     background-color: aquamarine;
     padding: 25px;
 }
+.current-city {
+    font-size: 50px;
+    font-weight: 600;
+}
+.current-date {
+    font-size: 25px;
+    font-weight: 400;
+    color: rgba(234, 240, 246, 0.8);
+}
 .input {
     background-color: lightpink;
     padding: 25px;
@@ -32,6 +41,7 @@ footer {
     text-align: center;
     padding: 5px;
     font-size: 15px;
+    font-weight: 400;
     color: white;
     border-color: #8BC6EC;
     background-color: #8BC6EC;
