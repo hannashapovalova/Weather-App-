@@ -24,6 +24,30 @@ footer {
     background-color: lightpink;
     padding: 25px;
 }
+.input-form {
+    width: 200px;
+}
+.search-button, .find-me-button {
+    width: 75px;
+    text-align: center;
+    padding: 5px;
+    font-size: 15px;
+    color: white;
+    border-color: #8BC6EC;
+    background-color: #8BC6EC;
+    border-width: 2px;
+}
+.search-button:hover,
+.find-me-button:hover {
+    background-color: #EC6E4C;
+    border-color: #EC6E4C;
+    transition: all 0.4s 0s ease-in-out;
+}
+.search-button:focus,
+.find-me-button:focus {
+    background-color: #EC6E4C;
+    border-color: #EC6E4C;
+}
 .current-weather-block {
     background-color: yellow;
     padding: 25px;
@@ -62,19 +86,16 @@ footer {
     font-size: 27px;
 }
 
-
-
-
 .forecast {
     background-color: lightgreen;
     margin: 0 auto;
     
 }
 .forecast-block {
-    background-color: #CFD5DB;
+    background-color: rgba(156, 160, 165, 0.8);
     margin: 15px 25px 5px 35px;
     text-align: center;
-    border-radius: 15px;
+    border-radius: 10px;
     max-width: 150px;
 }
 .forecast-day {
