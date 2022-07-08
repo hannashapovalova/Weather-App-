@@ -3,11 +3,16 @@ body {
     background-color: #8BC6EC;
     background-image: linear-gradient(135deg, #8BC6EC 0%, #9599E2 100%) fixed;
     color: #F2F2F1;
+    margin-top: 100px;
 }
 main {
-    border: 1px solid gold;
-
+    margin: 0 auto;
+    border-radius: 15px;
+    max-width: 1000px;
+    height: 550px;
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.2);
 }
 footer {
     text-align: center;
+    margin-top: 50px;
 }
