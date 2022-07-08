@@ -23,8 +23,20 @@ footer {
     background-color: lightpink;
 }
 .current-weather-block {
-    background-color: lightgoldenrodyellow;
+    background-color: yellow;
 }
 .precipitation {
     background-color: lightsalmon;
+}
+.forecast {
+    background-color: lightgreen;
+    margin: 0 auto;
+    
+}
+.forecast-block {
+    background-color: gray;
+    margin: 25px 25px 5px 25px;
+    text-align: center;
+    border-radius: 15px;
+    max-width: 150px;
 }
