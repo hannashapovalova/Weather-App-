@@ -51,6 +51,8 @@ let dayOfWeek = document.querySelector("#day");
 dayOfWeek.innerHTML = `${currentDayOfWeeek}`;
 
 
+
+
 // Forecast
 
 function formatDay(timestamp) {
@@ -121,11 +123,9 @@ let form = document.querySelector("#search-form");
 form.addEventListener("submit", search);
 
 function getForecast(coordinates) {
-  console.log(coordinates);
   let apiKey = "238f6bbecd817b0849866bc3d0d8b987";
   let units = "metric";
   let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=${units}`;
-  console.log(apiUrl);
   axios.get(apiUrl).then(showForecast);
 
 }
@@ -133,21 +133,7 @@ function getForecast(coordinates) {
 function showTemperature(response) {
     temp = Math.round(response.data.main.temp);
     let showTemp = document.querySelector("#temperature");
-    showTemp.innerHTML = `${temp}&deg; 
-      <span>
-        <sup class="unit">
-          <a href="#" id="celsius" class="celsius-unit">
-            C
-          </a>
-        </sup>
-        <sup class="separator">
-          |
-        </sup>
-        <sup class="unit">
-          <a href="#" id="farenheit" class="farenheit-unit">F
-          </a>
-        </sup>
-      </span>`;
+    showTemp.innerHTML = `${temp}&deg;`;
 
     let wind = Math.round(response.data.wind.speed);
     let showWind = document.querySelector("#wind-speed");
@@ -180,5 +166,29 @@ function showTemperature(response) {
 
     getForecast(response.data.coord);
 }
+
+//Change temperature Celsius/Farenhait
+
+function tempFarenhait(event) {
+    event.preventDefault();
+    let farenhaitTemperatureElement = document.querySelector("#temperature");
+    let farenhaitTemperature = (temp * 9) / 5 + 32;
+    farenhaitTemperatureElement.innerHTML = `${Math.round(farenhaitTemperature)}&deg;`;
+}
+
+function tempCelsius(event) {
+    event.preventDefault();
+    let celsiusTemperatureElement = document.querySelector("#temperature");
+    celsiusTemperatureElement.innerHTML = `${temp}&deg;`
+}
+let temp = null;
+let cutTemp = null;
+
+let showTempF = document.querySelector("#farenheit");
+showTempF.addEventListener("click", tempFarenhait);
+
+let showTempC = document.querySelector("#celsius");
+showTempC.addEventListener("click", tempCelsius);
+
 
 getApiWeather("Kyiv");
