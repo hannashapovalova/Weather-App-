@@ -82,10 +82,10 @@
         </div>
 
         <div class="col input">
-          <form>
+          <form class="search-form">
             <input 
              type="search" 
-             class="form-control rounded input-form"
+             class="search-input"
              id="search-text-input" 
              placeholder="Search city" 
              aria-label="Search"
@@ -95,14 +95,14 @@
              autofocus/>
             <button 
              type="submit"
-             class="btn btn-outline-primary search-button">
+             class="search-button">
               Search
             </button>
           </form>
           <form>
             <button 
              type="submit"
-             class="btn btn-outline-primary find-me-button">
+             class="find-me-button">
               Find Me
             </button>
           </form>
@@ -117,7 +117,8 @@
             <div class="col">
               <img 
                src="http://openweathermap.org/img/wn/10d@2x.png" 
-               alt="Weather icon">
+               alt="Weather icon"
+               class="main-icon">
             </div>
             <div class="col">
               <h2 
@@ -134,8 +135,7 @@
                     |
                   </sup>
                   <sup class="unit">
-                    <a href="#" id="farenheit" class="farenheit-unit">
-                      F
+                    <a href="#" id="farenheit" class="farenheit-unit">F
                     </a>
                   </sup>
                 </span>

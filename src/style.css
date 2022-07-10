@@ -9,7 +9,7 @@ main {
     margin: 0 auto;
     border-radius: 15px;
     max-width: 1000px;
-    height: 550px;
+    height: 600px;
     box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.2);
 }
 footer {
@@ -17,7 +17,7 @@ footer {
     margin-top: 50px;
 }
 .current-date-block {
-    background-color: aquamarine;
+    /* background-color: aquamarine; */
     padding: 25px;
 }
 .current-city {
@@ -29,23 +29,35 @@ footer {
     font-weight: 400;
     color: rgba(234, 240, 246, 0.8);
 }
-.input {
-    background-color: lightpink;
-    padding: 25px;
+.search-form {
+    margin-top: 25px;
 }
-.input-form {
-    width: 200px;
+.search-input {
+    color: rgba(39, 33, 66, .4);
+    font-size: 16px;
+    border: 2px solid rgba(156, 160, 165, 0.8);
+    border-radius: 6px;
+    box-shadow: 0 0 15px 4px rgba(0, 0, 0, 0.06);
+    padding: 5px;
+    width: 50%;
+}
+.search-input:focus {
+    border-color: #80bdff;
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem rgb(0 123 255 / 25%);
 }
 .search-button, .find-me-button {
     width: 75px;
     text-align: center;
-    padding: 5px;
+    margin: 5px;
+    padding: 7px;
     font-size: 15px;
     font-weight: 400;
     color: white;
-    border-color: #8BC6EC;
+    border: none;
     background-color: #8BC6EC;
-    border-width: 2px;
+    border-radius: 6px;
+    box-shadow: 0 0 15px 4px rgba(0, 0, 0, 0.06);
 }
 .search-button:hover,
 .find-me-button:hover {
@@ -59,11 +71,39 @@ footer {
     border-color: #EC6E4C;
 }
 .current-weather-block {
-    background-color: yellow;
+    /* background-color: yellow; */
     padding: 25px;
 }
+.current-temperature {
+    font-size: 75px;
+    font-weight: 600;
+}
+.unit {
+    font-weight: 300;
+    font-size: 25px;
+}
+
+.farenheit-unit,
+.celsius-unit {
+    color: #fff;
+}
+
+.farenheit-unit:hover,
+.celsius-unit:hover {
+    color: #EC6E4C;
+    transition: all 0.4s 0s ease-in-out;
+}
+
+.separator {
+    font-size: 25px;
+}
+.description {
+    color: rgba(234, 240, 246, 0.8);
+    font-size: 27px;
+    text-align: center;
+}
 .precipitation {
-    background-color: lightsalmon;
+    /* background-color: lightsalmon; */
     padding: 25px;
 }
 .precipitation-block {
@@ -97,12 +137,12 @@ footer {
 }
 
 .forecast {
-    background-color: lightgreen;
+    /* background-color: lightgreen; */
     margin: 0 auto;
     
 }
 .forecast-block {
-    background-color: rgba(156, 160, 165, 0.8);
+    background-color: rgba(156, 160, 165, 0.5);
     margin: 15px 25px 5px 35px;
     text-align: center;
     border-radius: 10px;
