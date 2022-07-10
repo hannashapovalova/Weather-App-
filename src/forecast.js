@@ -148,14 +148,28 @@ function showTemperature(response) {
     showDescription.innerHTML = `${descriction}`;
 
     let sunset = response.data.sys.sunset;
-    let sunsetElement = `${new Date(sunset * 1000).getHours()}:` + `${new Date(sunset * 1000).getMinutes()}`;
+    let sunsetHours = new Date(sunset * 1000).getHours();
+    if (sunsetHours < 10) {
+      sunsetHours = `0${sunsetHours}`;
+    }
+    let sunsetMinutes = new Date(sunset * 1000).getMinutes();
+    if (sunsetMinutes <10) {
+      sunsetMinutes = `0${sunsetMinutes}`;
+    }
     let showSunset = document.querySelector(".sunset-value");
-    showSunset.innerHTML = `${sunsetElement}`;
+    showSunset.innerHTML = `${sunsetHours}:${sunsetMinutes}`;
 
     let sunrise = response.data.sys.sunrise;
-    let sunriseElement = `${new Date(sunrise * 1000).getHours()}:` + `${new Date(sunrise * 1000).getMinutes()}`;
+    let sunriseHours = new Date(sunrise * 1000).getHours()
+    if (sunriseHours < 10) {
+      sunriseHours = `0${sunriseHours}`;
+    }
+    let sunrisenMinutes = new Date(sunrise * 1000).getMinutes();
+    if (sunrisenMinutes  < 10) {
+      ssunrisenMinutes  = `0${sunrisenMinutes}`;
+    }
     let showSunrise = document.querySelector(".sunrise-value");
-    showSunrise.innerHTML = `${sunriseElement}`;
+    showSunrise.innerHTML = `${sunriseHours}:${sunrisenMinutes}`;
 
     let iconElement = document.querySelector(".main-icon");
     iconElement.setAttribute(
