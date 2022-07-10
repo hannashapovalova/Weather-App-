@@ -181,3 +181,4 @@ function showTemperature(response) {
     getForecast(response.data.coord);
 }
 
+getApiWeather("Kyiv");
