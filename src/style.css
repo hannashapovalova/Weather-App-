@@ -37,7 +37,7 @@ footer {
 .search-input {
     color: rgba(39, 33, 66, .4);
     font-size: 16px;
-    border: 2px solid rgba(156, 160, 165, 0.8);
+    border: none;
     border-radius: 6px;
     padding: 5px;
     width: 50%;
@@ -116,11 +116,14 @@ footer {
     font-size: 27px;
     text-align: center;
 }
+
+/* PRECIPITATION BLOCK */
+
 .precipitation {
-    padding: 25px;
+    padding: 15px;
 }
 .precipitation-block {
-    padding-left: 15px;
+    padding-left: 25px;
     padding-top: 10px;
     
 }
