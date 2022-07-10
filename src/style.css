@@ -94,6 +94,7 @@ footer {
 .current-temperature {
     font-size: 75px;
     font-weight: 600;
+    display: inline;
 }
 .unit {
     font-weight: 300;
