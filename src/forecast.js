@@ -166,7 +166,7 @@ function showTemperature(response) {
     }
     let sunrisenMinutes = new Date(sunrise * 1000).getMinutes();
     if (sunrisenMinutes  < 10) {
-      ssunrisenMinutes  = `0${sunrisenMinutes}`;
+      sunrisenMinutes  = `0${sunrisenMinutes}`;
     }
     let showSunrise = document.querySelector(".sunrise-value");
     showSunrise.innerHTML = `${sunriseHours}:${sunrisenMinutes}`;
@@ -195,6 +195,8 @@ function tempCelsius(event) {
     let celsiusTemperatureElement = document.querySelector("#temperature");
     celsiusTemperatureElement.innerHTML = `${temp}&deg;`
 }
+
+
 let temp = null;
 let cutTemp = null;
 
