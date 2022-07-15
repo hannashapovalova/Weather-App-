@@ -208,28 +208,28 @@ showTempC.addEventListener("click", tempCelsius);
 
 // Get current city and temp by Geolocation
 
-function getPosition(position) {
-  let latitude = position.coords.latitude;
-  let longitude = position.coords.longitude;
-  let apiKey = "238f6bbecd817b0849866bc3d0d8b987";
-  let units = "metric";
-  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=${units}`;
-  axios.get(apiUrl).then(showCurrentData);
-}
+//function getPosition(position) {
+  //let latitude = position.coords.latitude;
+ // let longitude = position.coords.longitude;
+  //let apiKey = "238f6bbecd817b0849866bc3d0d8b987";
+  //let units = "metric";
+  //let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=${units}`;
+  //axios.get(apiUrl).then(showCurrentData);
+//}
 
-function showCurrentData(response) {
-  let city = response.data.name;
-  getApiWeather(city);
-  let currentCity = document.querySelector("#city");
-  currentCity.innerHTML = `${city}`;
-}
+//function showCurrentData(response) {
+  //let city = response.data.name;
+  //getApiWeather(city);
+  //let currentCity = document.querySelector("#city");
+  //currentCity.innerHTML = `${city}`;
+//}
 
-function findMeButton() {
-  navigator.geolocation.getCurrentPosition(getPosition);
-}
+//function findMeButton() {
+  //navigator.geolocation.getCurrentPosition(getPosition);
+//}
 
-let button = document.querySelector(".find-me-button");
-button.addEventListener("click", findMeButton);
+//let button = document.querySelector(".find-me-button");
+//button.addEventListener("click", findMeButton);
 
 
 getApiWeather("Kyiv");
